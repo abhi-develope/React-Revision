@@ -2,6 +2,12 @@ import { Container } from 'postcss'
 import React from 'react'
 
 function AddItem() {
+    const[addItem, setAddItem] = useState()
+
+   const handelItem = ()=>{
+    
+   }
+
   return (
    
     <div className='flex justify-around Container my-2'>
