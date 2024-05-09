@@ -7,7 +7,7 @@ function Buttons() {
         <div className='p-4 m-4'>
             <div className="buttonContainer flex flex-wrap gap-2 max-w-[300px]">
                 {buttons.map((button) => (
-                    <button key={button} className='p-3 m-2 shadow-lg rounded-md'>{button}</button>
+                    <button key={button} className='p-3 m-2 shadow-lg rounded-md hover:bg-slate-300'>{button}</button>
                 ))}
             </div>
         </div>

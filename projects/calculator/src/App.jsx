@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Display from './components/Display'
 import Buttons from './components/Buttons'
 
 function App() {
+    const [displayValue, setDisplayValue]= useState("0")
   return (
     <div className='container'>
-      <Display/>
+      <Display displayValue={displayValue}/>
       <Buttons/>
     </div>
   )
