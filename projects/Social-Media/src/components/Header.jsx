@@ -3,8 +3,8 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <div >
+    <header class="d-flex flex-wrap justify-content-end py-3 mb-4 border-bottom w-[75vw]">
       
 
       <ul class="nav nav-pills">
