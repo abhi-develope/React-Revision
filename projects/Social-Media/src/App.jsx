@@ -1,3 +1,4 @@
+import CreatePost from "./components/CreatePost";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -8,6 +9,7 @@ function App() {
       <Sidebar />
       <div className="inner flex flex-col">
         <Header />
+        <CreatePost/>
         <Footer />
       </div>
     </div>
