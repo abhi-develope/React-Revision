@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function Sidebar() {
+function Sidebar({selectedTab, setSelectedTab}) {
   return (
     <div>
         <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary " style={{width: "280px", height: "100vh"}}>
@@ -11,36 +11,26 @@ function Sidebar() {
     </a>
     <hr/>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+      <li class="nav-item" onClick={()=>{setSelectedTab("home")}}>
+        <a href="#" class={`nav-link link-body-emphasis nav-link  ${selectedTab === "home" && "active text-white " }`} aria-current="page">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
           Home
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
+      <li onClick={()=>{setSelectedTab("createPost")}}>
+        <a href="#" class={`nav-link link-body-emphasis nav-link  ${selectedTab === "createPost" && "active text-white" }`} >
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
-          Dashboard
+          Create Post
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
+      <li onClick={()=>{setSelectedTab("postList")}}>
+        <a href="#" class={`nav-link link-body-emphasis nav-link  ${selectedTab === "postList" && "active text-white" }`} >
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
-          Orders
+          Post List
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
-          Customers
-        </a>
-      </li>
+      
+      
     </ul>
     <hr/>
     <div class="dropdown">
